@@ -196,7 +196,7 @@ export const DATA = {
       dates: 'May 14 - June 14, 2025',
       location: 'Online, Indonesia',
       description:
-        'Developed a Web Application to prevent wild gambling and self support condition management based on AI.',
+        'My first ever Hackathon and surprisingly i won!, I developed a Web Application to prevent wild gambling and self support condition management based on AI.',
       image: '/elevaite.ico',
       mlh: '',
       links: [
