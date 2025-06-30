@@ -91,8 +91,8 @@ export default async function Blog({
           </Suspense>
         </div>
       </div>
-      <div className="max-h-[450px] rounded-md flex justify-center items-center  bg-slate-300 dark:bg-slate-700 mb-4">
-        <img className="rounded-md max-h-[450px]" src={post.metadata.image}></img>
+      <div className="max-h-[450px] rounded-md flex justify-center items-center mb-8 mt-8 bg-slate-300 dark:bg-slate-700">
+        <img className="object-cover rounded-md" src={post.metadata.image}></img>
       </div>
       <article
         className="prose dark:prose-invert max-w-full"

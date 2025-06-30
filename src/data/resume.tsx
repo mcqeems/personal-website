@@ -72,11 +72,22 @@ export const DATA = {
 
   work: [
     {
+      company: 'Freelance',
+      href: 'https://qeem.site/',
+      badges: [],
+      location: 'Remote',
+      title: 'Software Developer',
+      logoUrl: '/logo.png',
+      start: 'June 2025',
+      end: 'Now',
+      description: `Taking on freelance work when available, and always creating personal projects in the meantime.`,
+    },
+    {
       company: 'PPTIK',
       href: 'https://pptik.unida.gontor.ac.id/',
       badges: [],
-      location: 'Remote',
-      title: 'Software Engineer & Network Engineer',
+      location: 'Office',
+      title: 'Software & Network Engineer',
       logoUrl: '/PPTIK.png',
       start: 'September 2024',
       end: 'Now',
