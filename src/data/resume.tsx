@@ -3,7 +3,7 @@ import { HomeIcon, NotebookIcon } from 'lucide-react';
 
 export const DATA = {
   name: "Mustaqim Nawahhudi Ma'arif",
-  initials: 'DV',
+  initials: 'mcqeems',
   url: 'https://qeem.site',
   location: 'Karawang',
   locationLink: 'https://www.google.com/maps/place/karawang',
