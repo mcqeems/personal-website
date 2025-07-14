@@ -36,6 +36,11 @@ export const metadata: Metadata = {
       },
     ],
   },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/logo.png',
+  },
   robots: {
     index: true,
     follow: true,
