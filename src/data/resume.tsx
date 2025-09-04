@@ -8,10 +8,12 @@ export const DATA = {
   location: 'Karawang',
   locationLink: 'https://www.google.com/maps/place/karawang',
   description: `I'm a passionate Computer Science student with a love for building innovative solutions.`,
-  summary: `As an aspiring Full-Stack Developer , I enjoy transforming ideas into functional, user-friendly applications. From designing sleek front-end interfaces to architecting efficient back-end systems, I thrive on creating seamless digital experiences. My hands-on experience with React.js has allowed me to develop responsive and interactive web apps, and I’m always eager to dive deeper into the ever-evolving world of JavaScript.`,
-  avatarUrl: '/me.png',
+  summary: `I'm a passionate Computer Science student with a love for building innovative solutions and exploring the intersection of software development, networking, and cloud technologies. My journey in tech has been driven by curiosity, problem-solving, and a deep fascination with Web Development and Cloud Computing.
+
+  As an aspiring Software Engineer, I enjoy transforming ideas into functional, user-friendly applications. From designing sleek front-end interfaces to architecting efficient back-end systems, I thrive on creating seamless digital experiences. My hands-on experience with Web Development has allowed me to develop responsive and interactive web apps, and I'm always eager to dive deeper into the ever-evolving world of Software Engineering.`,
+  avatarUrl: '/me.webp',
   skills: [
-    'React',
+    'React.js',
     'Next.js',
     'Typescript',
     'Javascript',
@@ -25,6 +27,14 @@ export const DATA = {
     'Astro',
     'AWS',
     'Azure',
+    'Prisma',
+    'MongoDB',
+    'MySql',
+    'Odoo',
+    'WordPress',
+    'FastAPI',
+    'Elysia.js',
+    'PostGre',
   ],
   navbar: [
     { href: '/', icon: HomeIcon, label: 'Home' },
@@ -77,7 +87,7 @@ export const DATA = {
       badges: [],
       location: 'Remote',
       title: 'Software Developer',
-      logoUrl: '/logo.png',
+      logoUrl: '/logo.webp',
       start: 'June 2025',
       end: 'Now',
       description: `Taking on freelance work when available, and always creating personal projects in the meantime.`,
@@ -114,101 +124,144 @@ export const DATA = {
   ],
   projects: [
     {
-      title: 'Renaissance',
-      href: 'https://renaissance.qeem.site',
-      dates: 'May 2025 - June 2025',
+      title: 'EarnMore',
+      href: 'https://earnmore.my.id',
+      dates: 'August 2025 - September 2025',
       active: true,
-      description:
-        'Renaissance is an AI-based web application designed for early education and self-support for individuals at risk of online gambling addiction.',
-      technologies: [
-        'React Router',
-        'Typescript',
-        'Firebase',
-        'TailwindCSS',
-        'Azure Open AI',
-        'Shadcn UI',
-        'Gemini AI',
-      ],
+      description: 'A comprehensive LMS built with Odoo as the main system to teach students at my university.',
+      technologies: ['Odoo', 'Python', 'Flask', 'Postgre'],
       links: [
         {
           type: 'Website',
-          href: 'https://renaissance.qeem.site',
+          href: 'https://earnmore.my.id',
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: '/projects/earnmore.webp',
+      video: '',
+    },
+    {
+      title: 'Jurumiyah',
+      href: 'https://jurumiyah.id',
+      dates: 'June 2025 - September 2025',
+      active: true,
+      description: 'A learning platform for jurumiyah or nahwu.',
+      technologies: ['Astro', 'MeiliSearch'],
+      links: [
+        {
+          type: 'Website',
+          href: 'https://jurumiyah.id',
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: '/projects/jurumiyah.webp',
+      video: '',
+    },
+    {
+      title: 'Jagatara',
+      href: 'https://jagatara.my.id',
+      dates: 'August 2025 - September 2025',
+      active: true,
+      description: 'Jagatara is an online learning based platform to learn indonesian traditional language.',
+      technologies: ['React.js', 'Typescript', 'MySql', 'TailwindCSS', 'Golang'],
+      links: [
+        {
+          type: 'Website',
+          href: 'https://jagatara.my.id',
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: '/projects/jagatara.webp',
+      video: '',
+    },
+    {
+      title: 'Podahoras',
+      href: 'https://podahoras.id',
+      dates: 'July 2025 - August 2025',
+      active: true,
+      description: 'Podahoras is a website provided to teach how to learn Batak especially Aksara Batak.',
+      technologies: ['React.js', 'Typescript', 'MySql', 'TailwindCSS', 'Golang'],
+      links: [
+        {
+          type: 'Website',
+          href: 'https://podahoras.id',
           icon: <Icons.globe className="size-3" />,
         },
         {
           type: 'Source',
-          href: 'https://github.com/mcqeems/renaissance',
+          href: 'https://github.com/mcqeems/aksara_batak',
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: '/renaissance.png',
-      video: '',
-    },
-    {
-      title: 'Pokedex',
-      href: 'https://pokedex.qeem.site',
-      dates: 'January 2025 - February 2025',
-      active: true,
-      description: 'A simple Pokemon collection website.',
-      technologies: ['React.Js', 'Javascript', 'TailwindCSS'],
-      links: [
-        {
-          type: 'Website',
-          href: 'https://pokedex.qeem.site',
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: 'Source',
-          href: 'https://github.com/mcqeems/pokedex',
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: '/pokedex.png',
-      video: '',
-    },
-    {
-      title: 'TI Whatsapp Bot',
-      href: 'https://github.com/mcqeems/ti_whatsapp_bot',
-      dates: 'February 2025',
-      active: true,
-      description: 'A smart bot based on Whatsapp to coverage the academics purposes of Computer Science Students.',
-      technologies: ['Javascript', 'Node.Js', 'Baileys'],
-      links: [
-        {
-          type: 'Source',
-          href: 'https://github.com/mcqeems/ti_whatsapp_bot',
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: '/ti_whatsapp.png',
-      video: '',
-    },
-    {
-      title: 'Jadwal Perkuliahan',
-      href: 'https://github.com/mcqeems/jadwal_perkuliahan',
-      dates: 'November 2024 - Desember 2025',
-      active: true,
-      description: 'A college class schedule management simulation web app.',
-      technologies: ['Python', 'Django', 'SQLite'],
-      links: [
-        {
-          type: 'Source',
-          href: 'https://github.com/mcqeems/jadwal_perkuliahan',
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: '/jadwal.png',
+      image: '/projects/aksara-batak.webp',
       video: '',
     },
   ],
   hackathons: [
+    {
+      title: 'Gemastik',
+      dates: '🟢 Ongoing',
+      location: 'Online, Indonesia',
+      description: 'A spectacular hackathons for the best of the best, its still ongoing so wish me luck!',
+      image: '/hackathons/gemastik.png',
+      mlh: '',
+      links: [
+        {
+          title: 'Site',
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: 'https://jagatara.my.id',
+        },
+      ],
+    },
+    {
+      title: 'PTN X elevAite',
+      dates: 'August 25, 2025',
+      location: 'Online, Indonesia',
+      description:
+        'The continuation of the previous hackathon, i got elected for the finalist but still havent managed to win yet.',
+      image: '/hackathons/ptn.png',
+      mlh: '',
+      links: [
+        {
+          title: 'Source',
+          icon: <Icons.github className="h-4 w-4" />,
+          href: 'https://github.com/mcqeems/renaissance',
+        },
+        {
+          title: 'Site',
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: 'https://renaissance.qeem.site',
+        },
+      ],
+    },
+    {
+      title: 'Aksara Batak by Domainesia',
+      dates: 'July 16 - August 24, 2025',
+      location: 'Online, Indonesia',
+      description:
+        'I built a learning platform for Aksara Batak, I got nominated but i didnt won but its okay i got alot of experience building this complex app.',
+      image: '/hackathons/domainesia.svg',
+      mlh: '',
+      links: [
+        {
+          title: 'Source',
+          icon: <Icons.github className="h-4 w-4" />,
+          href: 'https://github.com/mcqeems/aksara_batak',
+        },
+        {
+          title: 'Site',
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: 'https://podahoras.id',
+        },
+      ],
+    },
     {
       title: 'Hackathon elevAite by Dicoding',
       dates: 'May 14 - June 14, 2025',
       location: 'Online, Indonesia',
       description:
         'My first ever Hackathon and surprisingly i won!, I developed a Web Application to prevent wild gambling and self support condition management based on AI.',
-      image: '/elevaite.ico',
+      image: '/hackathons/elevaite.ico',
       mlh: '',
       links: [
         {

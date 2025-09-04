@@ -29,9 +29,9 @@ export const Icons = {
       fill="none"
       role="img"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className="size-6 scale-90 lucide lucide-instagram-icon lucide-instagram"
     >
       <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
