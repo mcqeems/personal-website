@@ -86,7 +86,7 @@ export const DATA = {
       href: 'https://qeem.site/',
       badges: [],
       location: 'Remote',
-      title: 'Software Developer',
+      title: 'Full Stack Developer',
       logoUrl: '/logo.webp',
       start: 'June 2025',
       end: 'Now',
