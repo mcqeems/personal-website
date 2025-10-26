@@ -199,10 +199,46 @@ export const DATA = {
   ],
   hackathons: [
     {
-      title: 'Gemastik',
-      dates: '🟢 Ongoing',
+      title: 'IEEEXTREME 19.0',
+      dates: 'October 26, 2025',
       location: 'Online, Indonesia',
-      description: 'A spectacular hackathons for the best of the best, its still ongoing so wish me luck!',
+      description: 'An International Competitive Programming Competition from IEEE.',
+      image: '/hackathons/ieeextreme_logo_general_colored_small.png',
+      mlh: '',
+      links: [
+        {
+          title: 'Site',
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: 'https://ieeextreme.org/',
+        },
+      ],
+    },
+    {
+      title: 'AWS Back-End Academy 2025 Online Hackathon: AI for Creative Economy',
+      dates: 'October 21, 2025',
+      location: 'Online, Indonesia',
+      description:
+        'A hackathon that makes developer loses their sanity caused by the complexity of AI and AWS Service.',
+      image: '/hackathons/aws-backend-hackathon.webp',
+      mlh: '',
+      links: [
+        {
+          title: 'Source',
+          icon: <Icons.github className="h-4 w-4" />,
+          href: 'https://github.com/mcqeems/link-match',
+        },
+        {
+          title: 'Site',
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: 'https://linkmatch.qeem.site',
+        },
+      ],
+    },
+    {
+      title: 'Gemastik',
+      dates: 'September 1, 2025',
+      location: 'Online, Indonesia',
+      description: 'A spectacular hackathons for the best of the best.',
       image: '/hackathons/gemastik.png',
       mlh: '',
       links: [
