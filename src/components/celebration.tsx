@@ -95,7 +95,8 @@ export default function Celebration() {
           <h1 className="md:text-7xl text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 animate-bounce">
             HAPPY BIRTHDAY!
           </h1>
-          <p className="md:text-3xl text-2xl font-semibold text-gray-700">Barakallah fi umrik!</p>
+          <p className="md:text-3xl text-2xl font-semibold text-gray-700">Elfarida Salsabila Putri</p>
+          <p className="md:text-2xl text-xl font-semibold text-gray-500">19 Years Old</p>
         </div>
 
         {/* Cake with Candles */}
