@@ -7,6 +7,11 @@ import BirthdayCard from '@/components/birthday-guy-card';
 import Celebration from '@/components/celebration';
 import { playSound } from '@/lib/sound-effects';
 
+export const metadata = {
+  title: 'Birthday Girl',
+  description: "Hey it's your Birthday!!",
+};
+
 export default function BirthdayPage() {
   const [stage, setStage] = useState<'card' | 'letter' | 'birthday-card' | 'celebration'>('card');
 
