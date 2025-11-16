@@ -83,7 +83,6 @@ export default function Celebration() {
               left: `${conf.x}%`,
               top: `${conf.y}%`,
               animation: `confetti-fall ${2 + Math.random() * 1}s linear forwards`,
-              delay: `${Math.random() * 0.2}s`,
             }}
           />
         ))}
