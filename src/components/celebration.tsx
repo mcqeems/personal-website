@@ -151,7 +151,7 @@ export default function Celebration() {
                   clipRule="evenodd"
                 />
               </svg>
-              <span className="text-sm">Click me</span>
+              <span className="text-sm text-gray-800">Click me</span>
             </div>
           </div>
         </div>
