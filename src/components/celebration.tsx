@@ -15,6 +15,7 @@ export default function Celebration() {
   const [fireworks, setFireworks] = useState<Particle[]>([]);
   const [confetti, setConfetti] = useState<Particle[]>([]);
   const [particleId, setParticleId] = useState(0);
+  const [isFlipped, setIsFlipped] = useState(false);
 
   useEffect(() => {
     const createFireworks = () => {
@@ -100,13 +101,59 @@ export default function Celebration() {
 
         {/* Cake with Candles */}
         <div className="flex justify-center items-end gap-12 my-12 py-4">
-          <Image
-            className="rounded-lg shadow-lg"
-            src="/troll/birthday-girl.png"
-            alt="elfa"
-            width={300}
-            height={300}
-          ></Image>
+          <div
+            className="relative cursor-pointer hover:scale-105 transition-transform duration-300"
+            onClick={() => setIsFlipped(!isFlipped)}
+            style={{ perspective: '1000px' }}
+          >
+            <div
+              className="relative transition-transform duration-700"
+              style={{
+                transformStyle: 'preserve-3d',
+                transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+              }}
+            >
+              {/* Front Image */}
+              <Image
+                className="rounded-lg shadow-lg"
+                src="/troll/birthday-girl.png"
+                alt="elfa"
+                width={300}
+                height={300}
+                style={{
+                  backfaceVisibility: 'hidden',
+                }}
+              />
+              {/* Back Image */}
+              <Image
+                className="rounded-lg shadow-lg absolute top-0 left-0 bg-white/50"
+                src="/troll/flea.webp"
+                alt="elfa flipped"
+                width={300}
+                height={300}
+                style={{
+                  backfaceVisibility: 'hidden',
+                  transform: 'rotateY(180deg)',
+                }}
+              />
+            </div>
+            {/* Pointer Icon Indicator */}
+            <div className="absolute -top-2 -right-2 bg-white rounded-full p-2 shadow-lg animate-bounce flex flex-row gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 text-purple-600"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M6.672 1.911a1 1 0 10-1.932.518l.259.966a1 1 0 001.932-.518l-.26-.966zM2.429 4.74a1 1 0 10-.517 1.932l.966.259a1 1 0 00.517-1.932l-.966-.26zm8.814-.569a1 1 0 00-1.415-1.414l-.707.707a1 1 0 101.415 1.415l.707-.708zm-7.071 7.072l.707-.707A1 1 0 003.465 9.12l-.708.707a1 1 0 001.415 1.415zm3.2-5.171a1 1 0 00-1.3 1.3l4 10a1 1 0 001.823.075l1.38-2.759 3.018 3.02a1 1 0 001.414-1.415l-3.019-3.02 2.76-1.379a1 1 0 00-.076-1.822l-10-4z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <span className="text-sm">Click me</span>
+            </div>
+          </div>
         </div>
 
         {/* Cake */}
