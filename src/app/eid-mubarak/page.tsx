@@ -54,13 +54,53 @@ export default function EidMubarak() {
     return images[Math.min(noCount, images.length - 1)];
   };
 
+  const playSoundEffect = (type: "buzz" | "error") => {
+    const audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
+    const playTone = (frequency: number, startTime: number, duration: number, volume: number) => {
+      const oscillator = audioCtx.createOscillator();
+      const gainNode = audioCtx.createGain();
+
+      // "square" or "triangle" type makes it sound louder and more like a real haptic motor than "sine"
+      oscillator.type = "square";
+      oscillator.frequency.value = frequency;
+
+      gainNode.gain.setValueAtTime(volume, startTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, startTime + duration);
+
+      oscillator.connect(gainNode);
+      gainNode.connect(audioCtx.destination);
+
+      oscillator.start(startTime);
+      oscillator.stop(startTime + duration);
+    };
+
+    if (type === "buzz") {
+      // 1000ms duration, loop 8 times to match the rapid haptic vibration
+      for (let i = 0; i < 8; i++) {
+        // 80ms tone every 125ms, high volume (1.5)
+        playTone(150, audioCtx.currentTime + i * 0.125, 0.08, 1.5);
+      }
+    } else if (type === "error") {
+      // 40ms duration
+      playTone(200, audioCtx.currentTime, 0.04, 1.5);
+      // delay 40, duration 40
+      playTone(180, audioCtx.currentTime + 0.08, 0.04, 1.5);
+      // delay 40, duration 40
+      playTone(150, audioCtx.currentTime + 0.16, 0.04, 2.0);
+      // delay 40, duration 50
+      playTone(120, audioCtx.currentTime + 0.25, 0.05, 1.5);
+    }
+  };
+
   const handleNoClick = () => {
     trigger(defaultPatterns.error);
+    playSoundEffect("error");
     setNoCount(noCount + 1);
   };
 
   const handleYesClick = () => {
     trigger(defaultPatterns.buzz);
+    playSoundEffect("buzz");
     setIsForgiven(true);
   };
 
@@ -79,6 +119,19 @@ export default function EidMubarak() {
           Makasih banget ya udah maafin aku! Semoga ini dapat memberi kamu kebahagiaan, ketenangan, dan rezeki yang
           melimpah ✨{" "}
         </p>
+        <div className="flex flex-col justify-center items-center mt-2 md:mt-4">
+          <p className="text-base text-center text-muted-foreground">Nih ambil THR-nya</p>
+          <a
+            onClick={() => {
+              trigger(defaultPatterns.success);
+            }}
+            href="/thr.pdf"
+            className="px-2 min-w-[100px] min-h-[50px] text-sm bg-blue-500 text-white rounded-lg font-bold hover:bg-blue-600 transition-colors shadow-md mt-2 flex justify-center items-center"
+            // download={true}
+          >
+            THR 💵
+          </a>
+        </div>
       </div>
     );
   }
