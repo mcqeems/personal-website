@@ -34,7 +34,8 @@
     "shiki": "^1.29.2",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
-    "unified": "^11.0.5"
+    "unified": "^11.0.5",
+    "web-haptics": "^0.0.6"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",

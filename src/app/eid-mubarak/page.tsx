@@ -1,12 +1,16 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { useWebHaptics } from "web-haptics/react";
+import { defaultPatterns } from "web-haptics";
 
 export default function EidMubarak() {
   const [name, setName] = useState<string>("");
   const [isForgiven, setIsForgiven] = useState<boolean>(false);
   const [noCount, setNoCount] = useState<number>(0);
   const hasPrompted = useRef<boolean>(false);
+
+  const { trigger } = useWebHaptics();
 
   useEffect(() => {
     if (!hasPrompted.current) {
@@ -51,10 +55,12 @@ export default function EidMubarak() {
   };
 
   const handleNoClick = () => {
+    trigger(defaultPatterns.error);
     setNoCount(noCount + 1);
   };
 
   const handleYesClick = () => {
+    trigger(defaultPatterns.buzz);
     setIsForgiven(true);
   };
 
